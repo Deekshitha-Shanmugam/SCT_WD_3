@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe - Spring Edition</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- Particle Background -->
+  <div id="tsparticles"></div>
+
+  <!-- Game Container -->
+  <div class="container" id="app">
+    <h1>Tic Tac Toe</h1>
+    <div id="menu">
+      <button onclick="startGame('pvp')">Player vs Player</button>
+      <button onclick="startGame('bot')">Player vs Bot</button>
+    </div>
+    <div id="status"></div>
+    <div id="board" class="board"></div>
+    <button onclick="resetToMenu()" id="resetBtn" style="display:none">Restart</button>
+  </div>
+
+  <!-- Winner Modal -->
+  <div id="winner-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="winner-message"></h2>
+      <button onclick="resetToMenu()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+
+  <!-- tsParticles Config -->
+  <script>
+    tsParticles.load("tsparticles", {
+      fullScreen: { enable: true, zIndex: -1 },
+      particles: {
+        number: { value: 30 },
+        color: { value: "#ffb6c1" },
+        shape: { type: "circle" },
+        opacity: { value: 0.6, random: true },
+        size: { value: 5, random: true },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "bottom",
+          outModes: { default: "out" }
+        }
+      },
+      background: { color: "#ffffff00" }
+    });
+  </script>
+
+</body>
+</html>
