@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     app.innerHTML = `
       <div class="menu">
         <h1>🌸 Tic Tac Toe</h1>
-        <p class="subtitle">Choose your game mode and enjoy the spring vibes!</p>
+        <p class="subtitle">Choose your game mode and enjoy!!!</p>
         <button onclick="startGame('pvp')">👫 Player vs Player</button>
         <button onclick="startGame('bot')">🤖 Player vs Bot</button>
       </div>
